@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="site.css" rel="stylesheet" />
+</head>
+<body>
+    <!--
+    <input type="text" class="form-control" placeholder="Chirp New Tweet..." id="chirpTweet"/>
+    <button type="submit" class="btn btn-primary" onclick=""/>Chirp-->
+    <!-- Button trigger modal -->
+    <div id="triggerModal">
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+            New Chirp
+        </button>
+    </div>
+    <!-- Modal for add new chirp-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Compose new Chirp</h4>
+                </div>
+                <div class="modal-body">
+                    <!--<input type="text" id="newChirpId" />-->
+                    <textarea id="chirpTweet" rows="3" cols="77"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="newChirp()">Chirp</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal for edit chirp -->
+    <div class="modal fade" id="myModalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Edit Chirp</h4>
+                </div>
+                <div class="modal-body">
+                    <!--<label for="EditChirp">Chirp</label>-->
+                    <input class="form-control" id="EditChirp" placeholder="Edit chirp here..." />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <span id="ModalSaveButton"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="chirpDiv"></div>
+
+    <script src="Scripts/jquery-2.1.3.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
